@@ -246,7 +246,7 @@ bool dung = false;
 
 Biến `dung` cho biết thang máy có phải dừng ở tầng hiện tại hay không.
 
-**Bước 1 — xử lý yêu cầu trong cabin**
+**Bước 1 — Xử lý yêu cầu trong cabin**
 
 Nếu `yc_trong[tang_ht]` bằng `true`, chương trình:
 
@@ -255,7 +255,7 @@ Nếu `yc_trong[tang_ht]` bằng `true`, chương trình:
 
 Việc xóa chỉ diễn ra khi thang máy đã ở đúng tầng đích.
 
-**Bước 2 — xử lý yêu cầu ngoài sảnh**
+**Bước 2 — Xử lý yêu cầu ngoài sảnh**
 
 Chương trình duyệt danh sách `yc`. Nếu một yêu cầu có tầng và hướng đều khớp với trạng thái hiện tại, chương trình:
 
@@ -264,7 +264,7 @@ Chương trình duyệt danh sách `yc`. Nếu một yêu cầu có tầng và h
 
 Các yêu cầu không khớp được giữ lại để xử lý ở thời điểm khác.
 
-**Bước 3 — ghi nhật ký**
+**Bước 3 — Ghi nhật ký**
 
 - Nếu `dung == true`, in mã hành động `1`.
 - Nếu `dung == false`, in mã hành động `0`.
@@ -310,11 +310,11 @@ Vì chương trình đọc và lưu các yêu cầu trước khi mô phỏng, c�
 
 Vòng lặp chính chạy khi `kt_con_yc_nao_khong()` trả về `true`. Mỗi vòng gồm ba phần:
 
-**Phần 1 — phục vụ tầng hiện tại**
+**Phần 1 — Phục vụ tầng hiện tại**
 
 Gọi `xu_ly_tai_tang()` để kiểm tra và xử lý yêu cầu tại tầng đang đứng, sau đó in mã `0` hoặc `1`.
 
-**Phần 2 — kiểm tra đổi chiều**
+**Phần 2 — Kiểm tra đổi chiều**
 
 Nếu không còn yêu cầu phía trước theo hướng hiện tại nhưng toàn hệ thống vẫn còn yêu cầu, chương trình đảo hướng:
 
@@ -324,7 +324,7 @@ huong_ht = -huong_ht;
 
 Sau đó in mã hành động `2` tại tầng hiện tại với hướng mới.
 
-**Phần 3 — di chuyển**
+**Phần 3 — Di chuyển**
 
 Nếu hệ thống vẫn còn yêu cầu, cập nhật tầng hiện tại:
 
@@ -494,7 +494,7 @@ Các hàm `kt_con_yc_nao_khong()`, `co_yc_theo_chieu_ht()` và `xu_ly_tai_tang()
 
 ---
 
-## Phụ lục A. Mã nguồn được phân tích
+## Phụ lục. Mã nguồn được phân tích
 
 Mã nguồn dưới đây được giữ theo nội dung tài liệu đầu vào để có thể đối chiếu với phần giải thích.
 
